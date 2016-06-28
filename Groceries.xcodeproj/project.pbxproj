@@ -13,6 +13,10 @@
 		C8699BC91D22E70A0072EF03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8699BC71D22E70A0072EF03 /* Main.storyboard */; };
 		C8699BCB1D22E70A0072EF03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8699BCA1D22E70A0072EF03 /* Assets.xcassets */; };
 		C8699BCE1D22E70A0072EF03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8699BCC1D22E70A0072EF03 /* LaunchScreen.storyboard */; };
+		C8699BD71D22E75A0072EF03 /* GroceryCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C8699BD61D22E75A0072EF03 /* GroceryCategory.m */; };
+		C8699BDA1D22E77E0072EF03 /* GroceryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C8699BD91D22E77E0072EF03 /* GroceryItem.m */; };
+		C8699BE01D22E8230072EF03 /* ShoppingCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8699BDF1D22E8230072EF03 /* ShoppingCategoryTableViewController.m */; };
+		C8699BE31D22E90E0072EF03 /* AddCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8699BE21D22E90E0072EF03 /* AddCategoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		C8699BCA1D22E70A0072EF03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8699BCD1D22E70A0072EF03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8699BCF1D22E70A0072EF03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8699BD51D22E75A0072EF03 /* GroceryCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryCategory.h; sourceTree = "<group>"; };
+		C8699BD61D22E75A0072EF03 /* GroceryCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryCategory.m; sourceTree = "<group>"; };
+		C8699BD81D22E77E0072EF03 /* GroceryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryItem.h; sourceTree = "<group>"; };
+		C8699BD91D22E77E0072EF03 /* GroceryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryItem.m; sourceTree = "<group>"; };
+		C8699BDE1D22E8230072EF03 /* ShoppingCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCategoryTableViewController.h; sourceTree = "<group>"; };
+		C8699BDF1D22E8230072EF03 /* ShoppingCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCategoryTableViewController.m; sourceTree = "<group>"; };
+		C8699BE11D22E90E0072EF03 /* AddCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCategoryViewController.h; sourceTree = "<group>"; };
+		C8699BE21D22E90E0072EF03 /* AddCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCategoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,14 @@
 		C8699BBD1D22E7090072EF03 /* Groceries */ = {
 			isa = PBXGroup;
 			children = (
+				C8699BDE1D22E8230072EF03 /* ShoppingCategoryTableViewController.h */,
+				C8699BDF1D22E8230072EF03 /* ShoppingCategoryTableViewController.m */,
+				C8699BD51D22E75A0072EF03 /* GroceryCategory.h */,
+				C8699BD61D22E75A0072EF03 /* GroceryCategory.m */,
+				C8699BD81D22E77E0072EF03 /* GroceryItem.h */,
+				C8699BD91D22E77E0072EF03 /* GroceryItem.m */,
+				C8699BE11D22E90E0072EF03 /* AddCategoryViewController.h */,
+				C8699BE21D22E90E0072EF03 /* AddCategoryViewController.m */,
 				C8699BC11D22E7090072EF03 /* AppDelegate.h */,
 				C8699BC21D22E70A0072EF03 /* AppDelegate.m */,
 				C8699BC41D22E70A0072EF03 /* ViewController.h */,
@@ -150,8 +170,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8699BC61D22E70A0072EF03 /* ViewController.m in Sources */,
+				C8699BE01D22E8230072EF03 /* ShoppingCategoryTableViewController.m in Sources */,
+				C8699BDA1D22E77E0072EF03 /* GroceryItem.m in Sources */,
+				C8699BD71D22E75A0072EF03 /* GroceryCategory.m in Sources */,
 				C8699BC31D22E70A0072EF03 /* AppDelegate.m in Sources */,
 				C8699BC01D22E7090072EF03 /* main.m in Sources */,
+				C8699BE31D22E90E0072EF03 /* AddCategoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
