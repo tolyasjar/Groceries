@@ -8,7 +8,7 @@
 
 #import "ShoppingCategoryTableViewController.h"
 
-@interface ShoppingCategoryTableViewController ()
+@interface ShoppingCategoryTableViewController () <AddingNewCategory>
 
 @end
 
@@ -16,8 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+    self.groceryCategoryArray = [[NSMutableArray alloc]init];
+    self.navigationController.navigationBar.backgroundColor = [UIColor orangeColor];
+   
     }
 
 - (void)didReceiveMemoryWarning {
@@ -26,31 +27,38 @@
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    UINavigationController *navigationController = (UINavigationController *) segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"AddCategoryViewControllerSegue"])
+    {
     
-    NSArray *viewControllers = navigationController.viewControllers;
-    
-    
-    AddCategoryViewController *addCategoryViewController = (AddCategoryViewController *) viewControllers.firstObject;
-    
+        AddCategoryViewController *addCategoryViewController = (AddCategoryViewController *) segue.destinationViewController;
+        
     addCategoryViewController.addingNewCategorydelegate = self;
+        
+    }
+     else if  ([segue.identifier isEqualToString:@"SpecificCategoryTableViewControllerSegue"])
+     {
+         NSIndexPath *selectedIndexPath = self.tableView.indexPathForSelectedRow;
+         
+         GroceryCategory *groceryCategory = self.groceryCategoryArray[selectedIndexPath.row];
+       
+         SpecificCategoryTableViewController *specificCategoryTableViewController = (SpecificCategoryTableViewController *) segue.destinationViewController;
+         
+         specificCategoryTableViewController.groceryCategory = groceryCategory;
+        
+    }
     
-    //  addAccountViewController.customerName = @"John Doe";
 }
 
 - (void) addNewCategoryDidSave:(GroceryCategory *) groceryCategory {
-    
-    
+        
     [self.groceryCategoryArray addObject:groceryCategory];
     
     [self.tableView reloadData];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
+        
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -61,7 +69,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GroceryCategoryCell" forIndexPath:indexPath];
     
-    cell.textLabel.text =  self.groceryCategoryArray[indexPath.row];
+    GroceryCategory *groceryCategory = self.groceryCategoryArray[indexPath.row];
+    cell.textLabel.text =  groceryCategory.groceryTitle;
     
     return cell;
 }

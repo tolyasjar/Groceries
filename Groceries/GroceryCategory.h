@@ -11,7 +11,7 @@
 
 @interface GroceryCategory : NSObject
 
-@property (nonatomic,copy) NSString *groceryTitle;
-@property (nonatomic, copy) NSMutableArray *groceryItems;
+@property (nonnull,copy) NSString *groceryTitle;
+@property (nonnull, strong) NSMutableArray *groceryItems;
 
 @end

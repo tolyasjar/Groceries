@@ -10,9 +10,10 @@
 #import "GroceryCategory.h"
 #import "GroceryItem.h"
 #import "AddCategoryViewController.h"
+#import "SpecificCategoryTableViewController.h"
 
-@interface ShoppingCategoryTableViewController : UITableViewController <AddingNewCategory>
+@interface ShoppingCategoryTableViewController : UITableViewController
 
-@property (nonatomic,copy) NSMutableArray *groceryCategoryArray;
+@property (nonatomic,strong) NSMutableArray *groceryCategoryArray;
 
 @end

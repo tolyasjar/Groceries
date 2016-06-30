@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
     self.groceryCategoryTextField.delegate = self;
    
 }
@@ -34,7 +33,7 @@
     return YES;
 }
 
--(IBAction) close {
+-(IBAction) close  {
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -42,18 +41,16 @@
 
 -(IBAction)save :(id)sender {
 
+    // init groceryCategory & groceryCategoryItems array before adding anything to it
+
     GroceryCategory *groceryCategory = [[GroceryCategory alloc]init];
+    groceryCategory.groceryItems = [[NSMutableArray alloc]init];
     
     groceryCategory.groceryTitle = self.groceryCategoryTextField.text;
     
-    [self.addingNewCategorydelegate addNewCategoryDidSave:groceryCategory];
+    [self.addingNewCategorydelegate addNewCategoryDidSave:groceryCategory]; //fire the delegate method 
     
-}
-
-- (void) addingNewCategory:(NSString *) x {
-    
-  //  groceryCategoryArray[indexPath.row];
-    NSLog(@"Firing the delegate");
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 

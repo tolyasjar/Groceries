@@ -10,7 +10,7 @@
 
 @interface GroceryItem : NSObject
 
-@property (nonatomic,copy) NSString *groceryTitle;
+@property (nonatomic,copy) NSString *groceryItem;
 
 @end
 
