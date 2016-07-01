@@ -57,6 +57,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C8131E4D1D26E8DA00FCBC51 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C8699BD51D22E75A0072EF03 /* GroceryCategory.h */,
+				C8699BD61D22E75A0072EF03 /* GroceryCategory.m */,
+				C8699BD81D22E77E0072EF03 /* GroceryItem.h */,
+				C8699BD91D22E77E0072EF03 /* GroceryItem.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		C8131E4E1D26E8F700FCBC51 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C879D5C31D24177800306881 /* SpecificCategoryTableViewController.h */,
+				C879D5C41D24177800306881 /* SpecificCategoryTableViewController.m */,
+				C8699BDE1D22E8230072EF03 /* ShoppingCategoryTableViewController.h */,
+				C8699BDF1D22E8230072EF03 /* ShoppingCategoryTableViewController.m */,
+				C879D5C61D24189000306881 /* AddItemViewController.h */,
+				C879D5C71D24189000306881 /* AddItemViewController.m */,
+				C8699BE11D22E90E0072EF03 /* AddCategoryViewController.h */,
+				C8699BE21D22E90E0072EF03 /* AddCategoryViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		C8699BB21D22E7090072EF03 = {
 			isa = PBXGroup;
 			children = (
@@ -76,18 +102,8 @@
 		C8699BBD1D22E7090072EF03 /* Groceries */ = {
 			isa = PBXGroup;
 			children = (
-				C879D5C31D24177800306881 /* SpecificCategoryTableViewController.h */,
-				C879D5C41D24177800306881 /* SpecificCategoryTableViewController.m */,
-				C8699BDE1D22E8230072EF03 /* ShoppingCategoryTableViewController.h */,
-				C8699BDF1D22E8230072EF03 /* ShoppingCategoryTableViewController.m */,
-				C879D5C61D24189000306881 /* AddItemViewController.h */,
-				C879D5C71D24189000306881 /* AddItemViewController.m */,
-				C8699BE11D22E90E0072EF03 /* AddCategoryViewController.h */,
-				C8699BE21D22E90E0072EF03 /* AddCategoryViewController.m */,
-				C8699BD51D22E75A0072EF03 /* GroceryCategory.h */,
-				C8699BD61D22E75A0072EF03 /* GroceryCategory.m */,
-				C8699BD81D22E77E0072EF03 /* GroceryItem.h */,
-				C8699BD91D22E77E0072EF03 /* GroceryItem.m */,
+				C8131E4E1D26E8F700FCBC51 /* Controllers */,
+				C8131E4D1D26E8DA00FCBC51 /* Classes */,
 				C8699BC11D22E7090072EF03 /* AppDelegate.h */,
 				C8699BC21D22E70A0072EF03 /* AppDelegate.m */,
 				C8699BC41D22E70A0072EF03 /* ViewController.h */,

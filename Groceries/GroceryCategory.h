@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "GroceryItem.h"
 
-@interface GroceryCategory : NSObject
+@interface GroceryCategory : NSObject <NSCoding>
 
 @property (nonnull,copy) NSString *groceryTitle;
 @property (nonnull, strong) NSMutableArray *groceryItems;

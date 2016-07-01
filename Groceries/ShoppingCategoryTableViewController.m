@@ -18,8 +18,24 @@
     [super viewDidLoad];
     self.groceryCategoryArray = [[NSMutableArray alloc]init];
     self.navigationController.navigationBar.backgroundColor = [UIColor orangeColor];
-   
+    
+    NSLog(@"ViewDidLoad is fired");
+    
+//  Retrieving the data
+    
+    NSData *groceryCategoryData = [[NSUserDefaults standardUserDefaults] valueForKey:@"groecryCategory"];
+    
+    NSMutableArray *array = (NSMutableArray *) [NSKeyedUnarchiver unarchiveObjectWithData:groceryCategoryData];
+    
+    if(array != nil)
+    {
+        self.groceryCategoryArray = array;
+        [self.tableView reloadData];
     }
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -38,7 +54,7 @@
      else if  ([segue.identifier isEqualToString:@"SpecificCategoryTableViewControllerSegue"])
      {
          NSIndexPath *selectedIndexPath = self.tableView.indexPathForSelectedRow;
-         
+                  
          GroceryCategory *groceryCategory = self.groceryCategoryArray[selectedIndexPath.row];
        
          SpecificCategoryTableViewController *specificCategoryTableViewController = (SpecificCategoryTableViewController *) segue.destinationViewController;
@@ -50,8 +66,22 @@
 }
 
 - (void) addNewCategoryDidSave:(GroceryCategory *) groceryCategory {
-        
+    
+   
     [self.groceryCategoryArray addObject:groceryCategory];
+    
+    //Saving Data
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    NSData *groceryCategoryData = [NSKeyedArchiver archivedDataWithRootObject:self.groceryCategoryArray];
+    
+    [userDefaults setObject:groceryCategoryData forKey:@"groecryCategoryArray"];
+    
+    [userDefaults synchronize];
+    
+   //
+    
     
     [self.tableView reloadData];
         
