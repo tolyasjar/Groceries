@@ -19,20 +19,17 @@
     self.groceryCategoryArray = [[NSMutableArray alloc]init];
     self.navigationController.navigationBar.backgroundColor = [UIColor orangeColor];
     
-    NSLog(@"ViewDidLoad is fired");
     
-//  Retrieving the data
+    //  Retrieving the data
+        NSData *groceryCategoryData = [[NSUserDefaults standardUserDefaults] valueForKey:@"groecryCategoryArray"];
     
-    NSData *groceryCategoryData = [[NSUserDefaults standardUserDefaults] valueForKey:@"groecryCategory"];
+        NSMutableArray *array = (NSMutableArray *) [NSKeyedUnarchiver unarchiveObjectWithData:groceryCategoryData];
     
-    NSMutableArray *array = (NSMutableArray *) [NSKeyedUnarchiver unarchiveObjectWithData:groceryCategoryData];
-    
-    if(array != nil)
-    {
+        if(array != nil)
+        {
         self.groceryCategoryArray = array;
         [self.tableView reloadData];
-    }
-    
+        }
     
 }
 
@@ -73,11 +70,9 @@
     //Saving Data
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    
     NSData *groceryCategoryData = [NSKeyedArchiver archivedDataWithRootObject:self.groceryCategoryArray];
     
     [userDefaults setObject:groceryCategoryData forKey:@"groecryCategoryArray"];
-    
     [userDefaults synchronize];
     
    //
