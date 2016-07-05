@@ -16,21 +16,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.groceryCategory.groceryTitle;
     self.navigationController.navigationBar.backgroundColor = [UIColor orangeColor];
-    
-    //  Retrieving the data
-            NSData *groceryItemsData = [[NSUserDefaults standardUserDefaults] valueForKey:@"groecryItemsArray"];
-    
-            NSMutableArray *array = (NSMutableArray *) [NSKeyedUnarchiver unarchiveObjectWithData:groceryItemsData];
-    
-    if(array != nil)
-    {
-        self.groceryCategory.groceryItems = array;
-        [self.tableView reloadData];
-    }
+    self.title = self.groceryCategory.groceryTitle;
 
-   
+    //  Retrieving the data
+    
+    NSData *groceryItemsData = [[NSUserDefaults standardUserDefaults] valueForKey:self.groceryCategory.groceryTitle];
+    NSMutableArray *array = (NSMutableArray *) [NSKeyedUnarchiver unarchiveObjectWithData:groceryItemsData];
+    
+    if ((array != nil))
+    {
+          self.groceryCategory.groceryItems = array;
+         [self.tableView reloadData];
+    }
 }
 
 
@@ -40,7 +38,6 @@
 
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
         
     AddItemViewController *addItemViewController = (AddItemViewController *) segue.destinationViewController;
     
@@ -50,7 +47,6 @@
 
 -(void) addItemDidSave:(GroceryItem *) groceryItem {
     
- 
     [self.groceryCategory.groceryItems addObject:groceryItem];
     
     //Saving Data
@@ -58,13 +54,10 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSData *groceryItemsData = [NSKeyedArchiver archivedDataWithRootObject:self.groceryCategory.groceryItems];
     
-    [userDefaults setObject:groceryItemsData forKey:@"groecryItemsArray"];
+    [userDefaults setObject:groceryItemsData forKey:self.groceryCategory.groceryTitle];
     [userDefaults synchronize];
     
-    //
-    
     [self.tableView reloadData];
-    
     [self dismissViewControllerAnimated:YES completion:nil];
         
 }
@@ -81,9 +74,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CategoryItemCell" forIndexPath:indexPath];
     
-    GroceryItem *groceryItem = self.groceryCategory.groceryItems[indexPath.row];
-    cell.textLabel.text = groceryItem.groceryItem;
-    
+        GroceryItem *groceryItem = self.groceryCategory.groceryItems[indexPath.row];
+        cell.textLabel.text = groceryItem.groceryItem;
+
     return cell;
 }
 
