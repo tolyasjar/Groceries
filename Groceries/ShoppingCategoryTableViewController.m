@@ -17,8 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.groceryCategoryArray = [[NSMutableArray alloc]init];
-    self.navigationController.navigationBar.backgroundColor = [UIColor orangeColor];
-    
+    self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
     
     //  Retrieving the data
         NSData *groceryCategoryData = [[NSUserDefaults standardUserDefaults] valueForKey:@"groecryCategoryArray"];
@@ -74,9 +73,7 @@
     
     [userDefaults setObject:groceryCategoryData forKey:@"groecryCategoryArray"];
     [userDefaults synchronize];
-    
-   //
-    
+    //
     
     [self.tableView reloadData];
         
@@ -96,6 +93,8 @@
     
     GroceryCategory *groceryCategory = self.groceryCategoryArray[indexPath.row];
     cell.textLabel.text =  groceryCategory.groceryTitle;
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }

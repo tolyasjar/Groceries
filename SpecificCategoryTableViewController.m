@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.backgroundColor = [UIColor orangeColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
+
     self.title = self.groceryCategory.groceryTitle;
 
     //  Retrieving the data
@@ -76,7 +77,7 @@
     
         GroceryItem *groceryItem = self.groceryCategory.groceryItems[indexPath.row];
         cell.textLabel.text = groceryItem.groceryItem;
-
+    
     return cell;
 }
 
