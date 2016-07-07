@@ -91,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yuk-pV-32C">
-                                <rect key="frame" x="187" y="187" width="227" height="30"/>
+                                <rect key="frame" x="187" y="204" width="227" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="227" id="7aw-G0-Lto"/>
                                     <constraint firstAttribute="height" constant="30" id="Nwk-ly-HpZ"/>
@@ -120,7 +120,7 @@
                                 <color key="barTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter an Item:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQc-64-Hcb">
-                                <rect key="frame" x="220" y="137" width="161" height="21"/>
+                                <rect key="frame" x="220" y="144" width="161" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -128,14 +128,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Yuk-pV-32C" firstAttribute="top" secondItem="vQc-64-Hcb" secondAttribute="bottom" constant="29" id="4er-FI-qV9"/>
+                            <constraint firstItem="Yuk-pV-32C" firstAttribute="top" secondItem="vQc-64-Hcb" secondAttribute="bottom" constant="40" id="4er-FI-qV9"/>
                             <constraint firstItem="aa7-HG-N2v" firstAttribute="top" secondItem="9Ur-9d-HSL" secondAttribute="top" id="97B-eO-X7X"/>
                             <constraint firstAttribute="trailing" secondItem="aa7-HG-N2v" secondAttribute="trailing" id="Fnc-uf-eke"/>
-                            <constraint firstItem="zeL-0k-CIn" firstAttribute="top" secondItem="Yuk-pV-32C" secondAttribute="bottom" constant="383" id="YGI-m0-n2G"/>
                             <constraint firstItem="vQc-64-Hcb" firstAttribute="centerX" secondItem="Yuk-pV-32C" secondAttribute="centerX" id="ddC-zc-6qk"/>
                             <constraint firstItem="aa7-HG-N2v" firstAttribute="leading" secondItem="9Ur-9d-HSL" secondAttribute="leading" id="i2f-rO-3H5"/>
                             <constraint firstItem="aa7-HG-N2v" firstAttribute="centerX" secondItem="vQc-64-Hcb" secondAttribute="centerX" id="lHw-Ik-6gG"/>
-                            <constraint firstItem="vQc-64-Hcb" firstAttribute="top" secondItem="aa7-HG-N2v" secondAttribute="bottom" constant="73" id="oPv-Zx-vkx"/>
+                            <constraint firstItem="vQc-64-Hcb" firstAttribute="top" secondItem="aa7-HG-N2v" secondAttribute="bottom" constant="80" id="oPv-Zx-vkx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Adding New Item" id="gV4-C6-dmT">
@@ -163,7 +162,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ga8-oI-j7m">
-                                <rect key="frame" x="196" y="177" width="209" height="30"/>
+                                <rect key="frame" x="196" y="205" width="209" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="209" id="bxd-Sg-cFS"/>
                                 </constraints>
@@ -171,7 +170,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please add new grocery category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUo-dZ-UrU">
-                                <rect key="frame" x="170" y="133" width="260" height="21"/>
+                                <rect key="frame" x="170" y="144" width="260" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -199,12 +198,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GUo-dZ-UrU" firstAttribute="top" secondItem="nHx-37-h9c" secondAttribute="bottom" constant="69" id="9r3-qB-ys0"/>
+                            <constraint firstItem="GUo-dZ-UrU" firstAttribute="top" secondItem="nHx-37-h9c" secondAttribute="bottom" constant="80" id="9r3-qB-ys0"/>
                             <constraint firstItem="GUo-dZ-UrU" firstAttribute="centerX" secondItem="nHx-37-h9c" secondAttribute="centerX" id="RiC-Wr-DSg"/>
                             <constraint firstItem="GUo-dZ-UrU" firstAttribute="centerX" secondItem="Ga8-oI-j7m" secondAttribute="centerX" id="X9W-2m-FqD"/>
                             <constraint firstItem="nHx-37-h9c" firstAttribute="top" secondItem="b09-W2-r1d" secondAttribute="top" id="cB3-o2-u1k"/>
                             <constraint firstItem="nHx-37-h9c" firstAttribute="leading" secondItem="b09-W2-r1d" secondAttribute="leading" id="lkf-Bo-Cbr"/>
-                            <constraint firstItem="Ga8-oI-j7m" firstAttribute="top" secondItem="GUo-dZ-UrU" secondAttribute="bottom" constant="23" id="oTf-do-Vig"/>
+                            <constraint firstItem="Ga8-oI-j7m" firstAttribute="top" secondItem="GUo-dZ-UrU" secondAttribute="bottom" constant="40" id="oTf-do-Vig"/>
                             <constraint firstItem="GUo-dZ-UrU" firstAttribute="centerX" secondItem="b09-W2-r1d" secondAttribute="centerX" id="xfS-h3-WTA"/>
                         </constraints>
                     </view>
